@@ -32,16 +32,12 @@ def make_choice(options):
         print(f"{i}. {option}")
     
     choice = 0
-    while True:
+
+    while choice not in range(1, len(options)+1):
         try:
             choice = int(input("Votre choix: "))
-            if 1 <= choice <= len(options):
-                break
-            else:
-                print(f"Veuillez choisir un numéro entre 1 et {len(options)}.")
         except ValueError:
-            print("Veuillez entrer un numéro valide.")
-
+            print("Veuillez entrer un numéro valide.")
     
     return choice
 
@@ -70,11 +66,9 @@ def walk_story():
 
 def main():
     introduction()
-
     # Random event trigger
     if random.choice([True, False]):  # 50% chance to trigger an event
         random_event()
-
     # Phase 1: Bus or Walk
     options_phase1 = ["Prendre le bus", "Marcher"]
     choice_phase1 = make_choice(options_phase1)
@@ -84,7 +78,7 @@ def main():
     else:
         walk_story()
 
-    print("\nFélicitations, vous avez terminé l'aventure textuelle!")
+    print("\nFélicitations, vous avez terminé l'aventure textuelle!")
 
 if __name__ == "__main__":
     main()
