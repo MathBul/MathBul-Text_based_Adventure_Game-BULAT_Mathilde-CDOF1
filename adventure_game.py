@@ -32,16 +32,12 @@ def make_choice(options):
         print(f"{i}. {option}")
     
     choice = 0
-    while True:
+
+    while choice not in range(1, len(options)+1):
         try:
             choice = int(input("Votre choix: "))
-            if 1 <= choice <= len(options):
-                break
-            else:
-                print(f"Veuillez choisir un numéro entre 1 et {len(options)}.")
         except ValueError:
-            print("Veuillez entrer un numéro valide.")
-
+            print("Veuillez entrer un numéro valide.")
     
     return choice
 
