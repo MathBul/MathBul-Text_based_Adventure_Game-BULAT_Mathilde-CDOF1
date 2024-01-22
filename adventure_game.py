@@ -1,4 +1,22 @@
+import random
 import time
+
+def random_event():
+    events = [
+        {"message": "Vous trouvez une vieille carte au trésor!", "effect": "positive"},
+        {"message": "Il commence à pleuvoir, vous êtes trempé!", "effect": "negative"},
+        {"message": "Vous rencontrez un sage qui vous donne des conseils.", "effect": "neutral"}
+    ]
+
+    event = random.choice(events)
+    print(event["message"])
+    time.sleep(2)
+
+    # Here, you can implement specific effects based on the event's nature.
+    # For instance, 'positive' events could provide benefits to the player,
+    # 'negative' events could present new challenges, etc.
+    # This part of the implementation would depend on how complex you want the system to be.
+
 
 def introduction():
     print("Bienvenue dans l'aventure textuelle!")
@@ -52,6 +70,10 @@ def walk_story():
 
 def main():
     introduction()
+
+    # Random event trigger
+    if random.choice([True, False]):  # 50% chance to trigger an event
+        random_event()
 
     # Phase 1: Bus or Walk
     options_phase1 = ["Prendre le bus", "Marcher"]
