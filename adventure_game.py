@@ -34,12 +34,17 @@ def make_choice(options):
     choice = 0
 
     while choice not in range(1, len(options)+1):
-    try:
-        choice = int(input("Votre choix: "))
-    except ValueError:
-        print("Veuillez entrer un numéro valide.")
-        choice = 0  # Resetting choice to continue the loop
-    
+      try:
+          choice = int(input("Votre choix: "))
+      except ValueError:
+          print("Veuillez entrer un numéro valide.")
+          choice = 0  # Resetting choice to continue the loop
+
+          try:
+              choice = int(input("Votre choix: "))
+          except ValueError:
+              print("Veuillez entrer un numéro valide.")
+   
     return choice
 
 def bus_story():
