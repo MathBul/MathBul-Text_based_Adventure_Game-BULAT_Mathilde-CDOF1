@@ -7,7 +7,7 @@ To get started with the game, follow the instructions below:
 # Installation
 Clone this repository to your local machine using GitHub Desktop or by running the following command in your terminal:
 
-git clone https://github.com/{your-username}/MathBul-Test_based_Adventure_Game-BULAT_Mathilde-CDOF1.git
+git clone https://github.com/MathBul/MathBul-Text_based_Adventure_Game-BULAT_Mathilde-CDOF1.git
 
 Navigate to the project directory:
 
