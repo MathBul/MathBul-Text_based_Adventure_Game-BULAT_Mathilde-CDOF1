@@ -70,11 +70,9 @@ def walk_story():
 
 def main():
     introduction()
-
     # Random event trigger
     if random.choice([True, False]):  # 50% chance to trigger an event
         random_event()
-
     # Phase 1: Bus or Walk
     options_phase1 = ["Prendre le bus", "Marcher"]
     choice_phase1 = make_choice(options_phase1)
@@ -84,7 +82,7 @@ def main():
     else:
         walk_story()
 
-    print("\nFélicitations, vous avez terminé l'aventure textuelle!")
+    print("\nFélicitations, vous avez terminé l'aventure textuelle!")
 
 if __name__ == "__main__":
     main()
